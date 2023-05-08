@@ -74,7 +74,7 @@ console.log(obj);
 function deepFreeze1(obj) {
   Object.freeze(obj);
   const keys = Object.keys(obj);
-  for(key of keys) {
+  for(let key of keys) {
     if(typeof obj[key] === 'object') {
       deepFreeze1(obj[key]);
     }
@@ -84,7 +84,7 @@ function deepFreeze1(obj) {
 
 function deepFreeze2(obj) {
   Object.freeze(obj);
-  for(value of Object.values(obj)) {
+  for(let value of Object.values(obj)) {
     if(typeof value === 'object') {
       deepFreeze2(value);
     }

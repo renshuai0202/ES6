@@ -31,3 +31,7 @@ const obj2 = {
 }
 let { a: a1, b, c: { a: a2, d } } = obj2;
 console.log(a1, b, a2, d);
+
+/**
+ * 嵌套对象出现同名的属性时，需要使用属性别名
+ */
